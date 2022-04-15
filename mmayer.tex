@@ -1,0 +1,154 @@
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+\ifxetexorluatex
+  \setmainfont{Carlito}
+
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+  \usepackage{fontawesome}
+  \usepackage[draft=false]{hyperref}
+  \usepackage[super]{nth}
+  \hypersetup{
+    pdfnewwindow=true,
+    colorlinks=false,
+    linkcolor=darkgray,
+    urlcolor=black,
+    }
+  \urlstyle{same}
+\fi
+\definecolor{VividPurple}{HTML}{22267d}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Michael Safwat Hannalla}
+\tagline{Fullstack Software Engineer at Crossworkers}
+\personalinfo{%
+	% You can add your own with \printinfo{symbol}{detail}
+	\begin{tabular}{ l l l }
+		\location{Cairo, Egypt}
+		  & \email{michaelsafwat.hanna@gmail.com}                                                              
+		  & \phone{ \href{tel:+201225709936}{(+2) 012-257-09-936}}                                                                        
+		\\
+		\linkedin{\href{https://www.linkedin.com/in/MichaelSafwatHanna/}{linkedin.com/in/MichaelSafwatHanna}}
+		  & \printinfo{\faGithub}{\href{https://github.com/MichaelSafwatHanna}{github.com/MichaelSafwatHanna}} 
+		  & \printinfo{\faChain}{\href{https://zero-based.github.io/}{zero-based.github.io}}                   \\ 
+	\end{tabular}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+	\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
+
+\cvevent{\href{https://crossworkers.com/}{Crossworkers}/\href{https://www.plan2learn.dk/}{Plan2Learn}}{Full-stack software engineer}{AUG 2020 -- Present}{New Cairo, Egypt}
+\begin{itemize}
+	\item Full-time — SEP 2021 - Present
+	      \smallskip
+	\item Part-time — NOV 2020 - JUN 2021
+	      \smallskip
+	\item Intern    — AUG 2020 - NOV 2020
+\end{itemize}
+
+\divider
+
+\cvevent{\href{https://www.facebook.com/rotoosh.co}{Rotoosh}}{Co-founder \& Graphic Designer}{FEB 2016 - FEB 2022}{Online}
+
+\cvevent{\href{https://www.teradata.com/}{Teradata}}{Summer Intern}{JUL 2019 - AUG 2019}{New Cairo, Egypt}
+
+\cvsection{TECHNICAL SKILLS}
+\smallskip
+
+\textcolor{VividPurple}{\textbf{PROGRAMMING LANGUAGES}}
+\smallskip
+
+\begin{tabular}{ l l l } 
+	- C\#    & - TypeScript & - JavaScript \\
+	- Dart   & - Java       & - Kotlin     \\
+	- Python & - C++        & - C++        \\ 
+	- Assembly x86                             \\ 
+\end{tabular}
+\smallskip
+
+\textcolor{VividPurple}{\textbf{LIBRARIES \& FRAMEWORKS}}
+\smallskip
+
+\begin{tabular}{ l l l } 
+	- React.js & - ASP.NET Core & - .NET Core \\
+	- MUI      & - Nest js      & - Flutter   \\ 
+\end{tabular}
+\smallskip
+
+\textcolor{VividPurple}{\textbf{TOOLS \& PLATFORMS}}
+\smallskip
+
+\begin{tabular}{ l l l }
+	- Git      & - GitHub          & - Azure DevOps   \\
+	- Jira     & - SQL             & - Docker         \\ 
+	- Linux    & - Kafka           & - GitHub Actions \\
+	- GCP      & - Microsoft Azure & - AWS Lambda     \\
+	- REST API & - GraphQL         & - gRPC           \\
+\end{tabular}
+\smallskip
+
+\cvsection{PERSONAL SKILLS}
+\smallskip
+\begin{tabular}{ l l l } 
+	- Agile mindset & - team-player & - self-learner \\
+	- data oriented     & - analytical mindset                     \\
+\end{tabular}
+
+\cvsection{Achievements}
+\smallskip
+
+\begin{tabular}{ l l }
+	\faTrophy & \nth{1} \href{https://www.linkedin.com/feed/update/urn:li:activity:6711649526421295104/}{in Gov App Award}.         \\
+	\faTrophy & \nth{1} in Algorithms Course.              \\ 
+	\faTrophy & \nth{1} in \href{https://www.linkedin.com/feed/update/urn:li:activity:6572611476543025152/}{Universal Acceptance Readiness Hackathon}.  \\
+	\faTrophy & \nth{1} in \href{https://www.facebook.com/permalink.php?story_fbid=2077703849203331 & id=1839142163059502}{Android App in Summer’19.} \\
+	\faTrophy & \nth{3} in Smart City Hackathon.               \\
+\end{tabular}
+
+\clearpage
+
+% \cvsection[page2sidebar]{Publications}
+
+\nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+% %% If the NEXT page doesn't start with a \cvsection but you'd
+% %% still like to add a sidebar, then use this command on THIS
+% %% page to add it. The optional argument lets you pull up the
+% %% sidebar a bit so that it looks aligned with the top of the
+% %% main column.
+% % \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
