@@ -198,6 +198,24 @@
   \medskip\normalsize
 }
 
+\newcommand{\cvlongevent}[4]{%
+  \small\makebox[0.6\linewidth][l]{{\large\color{emphasis}#1}}
+  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}}\par 
+  \smallskip\normalsize
+  \ifstrequal{#2}{}{}{
+  \textbf{\color{accent}#2}\par
+  \smallskip}
+  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}}
+  \medskip\normalsize
+}
+
+\newcommand{\cvexperienceperiod}[3]{
+  \ifstrequal{#1}{}{}{{\small\makebox[0.25\linewidth][l]{\faCalendar\hspace{0.5em}#1}}}
+  \ifstrequal{#2}{}{}{{\small\makebox[0.25\linewidth][l]{#2}}}
+  \ifstrequal{#3}{}{}{{\small\makebox[0.2\linewidth][l]{>> #3}}}\par
+  \medskip\normalsize
+}
+
 \newcommand{\cvachievement}[3]{%
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
   \multirow{4}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\

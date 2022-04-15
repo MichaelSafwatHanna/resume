@@ -10,6 +10,7 @@
   \usepackage{fontawesome}
   \usepackage[draft=false]{hyperref}
   \usepackage[super]{nth}
+  \usepackage{subfiles}
   \hypersetup{
     pdfnewwindow=true,
     colorlinks=false,
@@ -33,16 +34,7 @@
 \name{Michael Safwat Hannalla}
 \tagline{Fullstack Software Engineer at Crossworkers}
 \personalinfo{%
-	% You can add your own with \printinfo{symbol}{detail}
-	\begin{tabular}{ l l l }
-		\location{Cairo, Egypt}
-		  & \email{michaelsafwat.hanna@gmail.com}                                                              
-		  & \phone{ \href{tel:+201225709936}{(+2) 012-257-09-936}}                                                                        
-		\\
-		\linkedin{\href{https://www.linkedin.com/in/MichaelSafwatHanna/}{linkedin.com/in/MichaelSafwatHanna}}
-		  & \printinfo{\faGithub}{\href{https://github.com/MichaelSafwatHanna}{github.com/MichaelSafwatHanna}} 
-		  & \printinfo{\faChain}{\href{https://zero-based.github.io/}{zero-based.github.io}}                   \\ 
-	\end{tabular}
+\subfile{personalinfo.example}
 }
 
 %% Make the header extend all the way to the right, if you want.
@@ -59,20 +51,23 @@
 %% \cvsection title in the "main" bar.
 \cvsection[page1sidebar]{Experience}
 
-\cvevent{\href{https://crossworkers.com/}{Crossworkers}/\href{https://www.plan2learn.dk/}{Plan2Learn}}{Full-stack software engineer}{AUG 2020 -- Present}{New Cairo, Egypt}
+\cvlongevent{\href{https://crossworkers.com/}{Crossworkers}/\href{https://www.plan2learn.dk/}{Plan2Learn}}{Full-stack software engineer}{}{Cairo, Egypt}
+\cvexperienceperiod{SEP 2021}{PRESENT}{Full-time}
+\cvexperienceperiod{NOV 2020}{JUN 2021}{Part-time}
+\cvexperienceperiod{AUG 2020}{NOV 2020}{Intern}
+
 \begin{itemize}
-	\item Full-time — SEP 2021 - Present
-	      \smallskip
-	\item Part-time — NOV 2020 - JUN 2021
-	      \smallskip
-	\item Intern    — AUG 2020 - NOV 2020
+	\item Implemented various features in a microservices environment.
+	\item Cross-team communication for integrating services of our team.
+	\item Fixed various bugs in the front/back-end.
+	\item Enhanced the developmnet experience in docker \& gRPC.
 \end{itemize}
 
 \divider
 
-\cvevent{\href{https://www.facebook.com/rotoosh.co}{Rotoosh}}{Co-founder \& Graphic Designer}{FEB 2016 - FEB 2022}{Online}
+\cvlongevent{\href{https://www.facebook.com/rotoosh.co}{Rotoosh}}{Co-founder \& Graphic Designer}{FEB 2016 - FEB 2022}{Online}
 
-\cvevent{\href{https://www.teradata.com/}{Teradata}}{Summer Intern}{JUL 2019 - AUG 2019}{New Cairo, Egypt}
+\cvlongevent{\href{https://www.teradata.com/}{Teradata}}{Summer Intern}{JUL 2019 - AUG 2019}{Cairo, Egypt}
 
 \cvsection{TECHNICAL SKILLS}
 \smallskip
