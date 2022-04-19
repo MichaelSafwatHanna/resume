@@ -198,14 +198,15 @@
   \medskip\normalsize
 }
 
-\newcommand{\cvlongevent}[4]{%
+\newcommand{\cvlongevent}[5]{%
   \small\makebox[0.6\linewidth][l]{{\large\color{emphasis}#1}}
-  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}}\par 
+  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#3}}}\par 
   \smallskip\normalsize
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
   \smallskip}
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}}
+  \ifstrequal{#4}{}{}{{\small\makebox[0.25\linewidth][l]{\faCalendar\hspace{0.5em}#4}}}
+  \ifstrequal{#5}{}{}{{\small\makebox[0.25\linewidth][l]{#5}}}
   \medskip\normalsize
 }
 
