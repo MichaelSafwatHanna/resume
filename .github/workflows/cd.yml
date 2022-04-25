@@ -1,0 +1,36 @@
+name: CD
+on:
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+env:
+  GF_NAME: mmayer
+  SF_NAME: ms-cv
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    container:
+      image: blang/latex:ubuntu
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create personal info
+        uses: DamianReeves/write-file-action@v1.0
+        with:
+          path: personalinfo.tex
+          contents: ${{ secrets.personal_info }}
+
+      - name: Generate pdf
+        run: pdflatex "${GF_NAME}.tex"
+
+      - name: Rename file
+        run: mv ${{ env.GF_NAME }}.pdf ${{ env.SF_NAME }}.pdf
+
+      - name: Save artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ms-cv
+          path: ${{ env.SF_NAME }}.pdf
