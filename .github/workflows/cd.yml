@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 env:
-  GF_NAME: mmayer
-  SF_NAME: ms-cv
+  GF_NAME: main
+  SF_NAME: michael-safwat-cv
 
 jobs:
   compile:

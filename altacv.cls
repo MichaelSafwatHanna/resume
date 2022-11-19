@@ -1,22 +1,3 @@
-%%%%%%%%%%%%%%%%%
-% This is altacv.cls (v1.1.5, 1 December 2018) written by
-% LianTze Lim (liantze@gmail.com).
-%
-%% It may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2003/12/01 or later.
-%%
-%%
-% Contributions:
-% - https://github.com/akreuzer Added ragged2e option (5 Nov 2018)
-% - https://github.com/stefanogermano Fixed bad boxes and undefined font shape (July 2018)
-% - https://github.com/foohyfooh Fixed blank spaces in \cvevent and bad link in README.md (June 2018)
-
-%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 %% v1.4: Detect TL2018 to handle accented characters in class information
 \@ifl@t@r\fmtversion{2018/04/01}{\UseRawInputEncoding}{}
@@ -187,7 +168,7 @@
 }
 
 % v1.1.4: fixes inconsistent font size
-\newcommand{\cvevent}[4]{%
+\newcommand{\cvEvent}[4]{%
   {\large\color{emphasis}#1\par}
   \smallskip\normalsize
   \ifstrequal{#2}{}{}{
@@ -198,26 +179,23 @@
   \medskip\normalsize
 }
 
-\newcommand{\cvlongevent}[5]{%
+\newcommand{\cvlongevent}[3]{%
   \small\makebox[0.6\linewidth][l]{{\large\color{emphasis}#1}}
   \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#3}}}\par 
   \smallskip\normalsize
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
   \smallskip}
-  \ifstrequal{#4}{}{}{{\small\makebox[0.25\linewidth][l]{\faCalendar\hspace{0.5em}#4}}}
-  \ifstrequal{#5}{}{}{{\small\makebox[0.25\linewidth][l]{#5}}}
-  \medskip\normalsize
 }
 
-\newcommand{\cvexperienceperiod}[3]{
+\newcommand{\experiencePeriod}[3]{
   \ifstrequal{#1}{}{}{{\small\makebox[0.25\linewidth][l]{\faCalendar\hspace{0.5em}#1}}}
   \ifstrequal{#2}{}{}{{\small\makebox[0.25\linewidth][l]{#2}}}
   \ifstrequal{#3}{}{}{{\small\makebox[0.2\linewidth][l]{>> #3}}}\par
-  \medskip\normalsize
+  \smallskip
 }
 
-\newcommand{\cvachievement}[3]{%
+\newcommand{\achievement}[3]{%
   \begin{tabularx}{\linewidth}{@{}p{2em} @{\hspace{1ex}} >{\raggedright\arraybackslash}X@{}}
   \multirow{4}{*}{\Large\color{accent}#1} & \bfseries\textcolor{emphasis}{#2}\\
   & #3
@@ -225,12 +203,12 @@
   %\smallskip
 }
 
-\newcommand{\cvproject}[1]{%
+\newcommand{\project}[1]{%
   {\textbf{\color{accent}#1}\par}
   \smallskip\normalsize
 }
 
-\newcommand{\cvtag}[1]{%
+\newcommand{\tag}[1]{%
   \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
 }
 
