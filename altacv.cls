@@ -188,10 +188,11 @@
   \smallskip}
 }
 
-\newcommand{\experiencePeriod}[3]{
+\newcommand{\experiencePeriod}[4]{
   \ifstrequal{#1}{}{}{{\small\makebox[0.25\linewidth][l]{\faCalendar\hspace{0.5em}#1}}}
   \ifstrequal{#2}{}{}{{\small\makebox[0.25\linewidth][l]{#2}}}
-  \ifstrequal{#3}{}{}{{\small\makebox[0.2\linewidth][l]{>> #3}}}\par
+  \ifstrequal{#3}{}{}{{\small\makebox[0.2\linewidth][l]{>> #3}}}
+  \ifstrequal{#4}{}{}{{\small\makebox[0.2\linewidth][l]{#4}}}\par
   \smallskip
 }
 

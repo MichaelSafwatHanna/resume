@@ -1,0 +1,84 @@
+\ProvidesPackage{datediff}
+
+\RequirePackage{calc}
+\RequirePackage{datenumber}
+
+\newcounter{datetoday}
+\newcounter{diffyears}
+\newcounter{diffmonths}
+\newcounter{diffdays}
+
+
+\newcommand{\difftoday}[3]{%
+      \setmydatenumber{datetoday}{\the\year}{\the\month}{\the\day}%
+      \setmydatenumber{diffdays}{#1}{#2}{#3}%
+      \addtocounter{diffdays}{-\thedatetoday}%
+      \ifnum\value{diffdays}>0
+        \def\diffbefore{in }%
+        \def\diffafter{}%
+      \else
+        \def\diffbefore{}%
+        \def\diffafter{+}%
+        \setcounter{diffdays}{-\value{diffdays}}%
+      \fi
+      \setcounter{diffyears}{\value{diffdays}/365}%
+      \setcounter{diffdays}{\value{diffdays}-365*\value{diffyears}}%
+      \setcounter{diffmonths}{\value{diffdays}/30}%
+      \setcounter{diffdays}{\value{diffdays}-30*\value{diffmonths}}%
+      %
+      \diffbefore
+      \ifnum\value{diffyears}=0
+      \else
+        \ifnum\value{diffyears}>1
+            \thediffyears\space yrs,
+        \else
+            \thediffyears\space yr,
+        \fi
+      \fi
+      \ifnum\value{diffmonths}=0
+      \else
+        \ifnum\value{diffmonths}>1
+            \thediffmonths\space mos
+        \else
+            \thediffmonths\space mos
+        \fi
+      \fi
+      \diffafter
+}
+
+\newcommand{\datediff}[6]{%
+      \setmydatenumber{datetoday}{#1}{#2}{#3}%
+      \setmydatenumber{diffdays}{#4}{#5}{#6}%
+      \addtocounter{diffdays}{-\thedatetoday}%
+      \ifnum\value{diffdays}>0
+        \def\diffbefore{ }%
+        \def\diffafter{}%
+      \else
+        \def\diffbefore{}%
+        \def\diffafter{+}%
+        \setcounter{diffdays}{-\value{diffdays}}%
+      \fi
+      \setcounter{diffyears}{\value{diffdays}/365}%
+      \setcounter{diffdays}{\value{diffdays}-365*\value{diffyears}}%
+      \setcounter{diffmonths}{\value{diffdays}/30}%
+      \setcounter{diffdays}{\value{diffdays}-30*\value{diffmonths}}%
+      %
+      \diffbefore
+      \ifnum\value{diffyears}=0
+      \else
+        \ifnum\value{diffyears}>1
+            \thediffyears\space yrs,
+        \else
+            \thediffyears\space yr,
+        \fi
+      \fi
+      \ifnum\value{diffmonths}=0
+      \else
+        \ifnum\value{diffmonths}>1
+            \thediffmonths\space mos
+        \else
+            \thediffmonths\space mos
+        \fi
+      \fi
+      \diffafter
+}
