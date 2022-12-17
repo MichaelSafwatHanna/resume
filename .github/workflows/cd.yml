@@ -7,7 +7,7 @@ on:
 
 env:
   GF_NAME: main
-  SF_NAME: michael-safwat-cv
+  SF_NAME: michael-safwat-resume
 
 jobs:
   release:
@@ -32,7 +32,7 @@ jobs:
       - name: Save artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ms-cv
+          name: ms-resume
           path: ${{ env.SF_NAME }}.pdf
           
       - name: Get current date

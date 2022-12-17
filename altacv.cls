@@ -181,7 +181,7 @@
 
 \newcommand{\cvlongevent}[3]{%
   \small\makebox[0.6\linewidth][l]{{\large\color{emphasis}#1}}
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#3}}}\par 
+  \ifstrequal{#3}{}{}{{\small{\faMapMarker\hspace{0.5em}#3}}}\par 
   \smallskip\normalsize
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
@@ -205,12 +205,11 @@
 }
 
 \newcommand{\project}[1]{%
-  {\textbf{\color{accent}#1}\par}
-  \smallskip\normalsize
+  {\textbf{\color{accent}#1}}
 }
 
 \newcommand{\tag}[1]{%
-  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
+  \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners=1.7ex,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
 }
 
 \newcommand{\cvskill}[2]{%
@@ -308,4 +307,10 @@
   \pagestyle{empty}
   \color{body}
   \raggedright
+}
+
+\newcommand{\ulbullet}[1]{\small\textbullet\hspace{0.5em}{#1}}
+
+\newcommand{\link}[2]{
+  \href{#1}{#2\hspace{0.25em}\tiny\faExternalLink}
 }
