@@ -13,13 +13,13 @@ jobs:
   release:
     runs-on: ubuntu-latest
     container:
-      image: blang/latex:ubuntu
+      image: bscpm/latex
     steps:
     
       - uses: actions/checkout@v4.1.7
 
       - name: Create personal info
-        uses: DamianReeves/write-file-action@v1.0
+        uses: DamianReeves/write-file-action@v1.3
         with:
           path: personalinfo.tex
           contents: ${{ secrets.personal_info }}
@@ -31,7 +31,7 @@ jobs:
         run: mv ${{ env.GF_NAME }}.pdf ${{ env.SF_NAME }}.pdf
 
       - name: Save artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.4.0
         with:
           name: ms-resume
           path: ${{ env.SF_NAME }}.pdf
